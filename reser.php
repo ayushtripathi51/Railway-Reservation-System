@@ -105,8 +105,6 @@ session_start();
 					<th style="border-top:0px;"> 1A</th>
 					<th style="border-top:0px;"> 2A </th>
 					<th style="border-top:0px;"> 3A </th>
-					<th style="border-top:0px;"> AC </th>
-					<th style="border-top:0px;"> CC </th>
 					<th style="border-top:0px;"> SL </th>
 				</tr>
 				<tr>
@@ -125,17 +123,13 @@ session_start();
 					<td style="border-top:0px;"><?php echo $_GET['quota'];?></td>
 					<input name="quota" style="display:none;" type="text" value="<?php echo $_GET['quota'];?>"> </td>
 		
-					<td style="border-top:0px;"> <input type="radio" name="selct" value="1A"> </td>
+					<td style="border-top:0px;"> <input type="radio" name="selct" value="1A" onclick="return false;" <?php if($_GET['class']=='1A') {echo 'checked';}?>> </td>
 					
-					<td style="border-top:0px;"> <input type="radio" name="selct" value="2A"> </td>
+					<td style="border-top:0px;"> <input type="radio" name="selct" value="2A" onclick="return false;" <?php if($_GET['class']=='2A') echo 'checked';?>> </td>
 					
-					<td style="border-top:0px;"> <input type="radio" name="selct" value="3A"> </td>
+					<td style="border-top:0px;"> <input type="radio" name="selct" value="3A" onclick="return false;" <?php if($_GET['class']=='3A') echo 'checked';?>> </td>
 					
-					<td style="border-top:0px;"> <input type="radio" name="selct" value="AC"> </td>
-					
-					<td style="border-top:0px;"> <input type="radio" name="selct" value="CC"> </td>
-					
-					<td style="border-top:0px;"> <input type="radio" name="selct" value="SL"> </td>
+					<td style="border-top:0px;"> <input type="radio" name="selct" value="SL" onclick="return false;" <?php if($_GET['class']=='SL') echo 'checked';?>> </td>
 				</tr>
 				</table>
 				

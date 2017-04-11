@@ -144,11 +144,11 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 				<tr>
 					<th style="width:80px;border-top:0px;"> Train No.</th>
 					<th style="width:270px;border-top:0px;"> Train Name </th>
-					<th style="width:70px;border-top:0px;"> Orig. </th>
-					<th style="width:70px;border-top:0px;"> Des. </th>
+					<th style="width:65px;border-top:0px;"> Orig. </th>
+					<th style="width:55px;border-top:0px;"> Des. </th>
 					<th style="width:70px;border-top:0px;"> Arr. </th>
 					<th style="width:80px;border-top:0px;"> Dep. </th>
-					
+					<th style="width:150px;border-top:0px;"></th>
 				</tr>
 				</table>
 				</div>
@@ -197,13 +197,18 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 				?>
 				<tr class="text-error">
 					<td style="width:70px;"> <?php   echo $row['Number']; ?> </td>
-					<td style="width:210px;"> 
-					<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>"> 
-						<?php echo $row['Name']; ?> </a></td>
+					<td style="width:250px;"> <?php echo $row['Name']; ?> </a></td>
 					<td style="width:65px;"> <?php echo $row['Ori']; ?> </td>
 					<td style="width:55px;"> <?php echo $row['Dest']; ?> </td>
 					<td style="width:60px;"> <?php   echo $q; ?> </td>
 					<td style="width:65px;"> <?php   echo $d; ?> </td>
+					<td style="width:200px;">  
+						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "1A";?>"><b>1A</b></a> 
+						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "2A";?>"><b>2A</b></a>
+						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "3A";?>"><b>3A</b></a> 
+						<a class="text-error" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "SL";?>"><b>SL</b></a> 
+						
+					</td>
 					</tr>
 				<?php  
 					}
@@ -212,13 +217,17 @@ else if((!isset($_POST['from'])) && (!isset($_POST['to'])))
 				?>
 				<tr class="text-info">
 					<td style="width:70px;"> <?php  echo $row['Number']; ?> </td>
-					<td style="width:210px;">
-					 <a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>">
-					<?php  echo $row['Name']; ?> </a> </td>
+					<td style="width:210px;"><?php  echo $row['Name']; ?> </a> </td>
 					<td style="width:65px;"> <?php  echo $row['Ori']; ?> </td>
 					<td style="width:55px;"> <?php  echo $row['Dest']; ?> </td>
 					<td style="width:60px;"> <?php  echo $q; ?> </td>
 					<td style="width:65px;"> <?php  echo $d; ?> </td>
+					<td style="width:200px;">
+						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "1A";?>"><b>1A</b> </a> 
+						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "2A";?>"><b>2A</b></a>
+						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "3A";?>"><b>3A</b></a>
+						<a class="text-info" href="reser.php?tno=<?php echo$row['Number']?>&fromstn=<?php echo $fromstn ?>&tostn=<?php echo $tostn ?>&doj=<?php echo $doj ?>&quota=<?php echo $quota;?>&class=<?php echo "SL";?>"><b>SL</b></a>
+					</td>
 				</tr>
 				<?php  
 					}
