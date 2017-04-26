@@ -116,7 +116,7 @@
 		</tr>
 		<tr>
 			<td style="border-top:0px;"> Date of Birth <font color=red>* </font></td>
-			<td style="border-top:0px;"><input type="date" class="input-block-level input-medium"  name="dob" value="<?php echo date('Y-m-d'); ?>"> </td>
+			<td style="border-top:0px;"><input type="date" class="input-block-level input-medium"  name="dob" max="<?php echo date('Y-m-d',time()-60*60*24*365*18);?>" value="<?php echo date('Y-m-d',time()-60*60*24*365*18);?>"> </td>
 		</tr>
 		
 		<tr>

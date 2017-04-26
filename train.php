@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require('firstimport.php');
 
 $tbl_name="interlist";
@@ -200,12 +199,12 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					{
 				?>
 				<tr class="text-info">
-					<td style="width:70px;"> <?php echo $row['Number']; ?> </td>
+					<td style="width:80px;"> <?php echo $row['Number']; ?> </td>
 					<td style="width:210px;"> <?php echo $row['Name']; ?> </td>
 					<td style="width:65px;"> <?php echo $row['Ori']; ?> </td>
-					<td style="width:55px;"> <?php echo $row['Dest']; ?> </td>
-					<td style="width:60px;"> <?php echo $q; ?> </td>
-					<td style="width:65px;"> <?php echo $d; ?> </td>
+					<td style="width:60px;"> <?php echo $row['Dest']; ?> </td>
+					<td style="width:70px;"> <?php echo $q; ?> </td>
+					<td style="width:55px;"> <?php echo $d; ?> </td>
 					<td style="width:20p;"> <?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
 					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>
@@ -225,12 +224,12 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					{
 				?>
 				<tr class="text-error">
-					<td style="width:70px;"> <?php echo $row['Number']; ?> </td>
+					<td style="width:80px;"> <?php echo $row['Number']; ?> </td>
 					<td style="width:210px;"> <?php echo $row['Name']; ?> </td>
 					<td style="width:65px;"> <?php echo $row['Origin']; ?> </td>
-					<td style="width:55px;"> <?php echo $row['Destination']; ?> </td>
-					<td style="width:60px;"> <?php echo $row['Arrival']; ?> </td>
-					<td style="width:65px;"> <?php echo $row['Departure']; ?> </td>
+					<td style="width:60px;"> <?php echo $row['Destination']; ?> </td>
+					<td style="width:70px;"> <?php echo $row['Arrival']; ?> </td>
+					<td style="width:55px;"> <?php echo $row['Departure']; ?> </td>
 					<td style="width:20p;"> <?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
 					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>
@@ -245,12 +244,12 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					{
 				?>
 				<tr class="text-info">
-					<td style="width:70px;"> <?php echo $row['Number']; ?> </td>
+					<td style="width:80px;"> <?php echo $row['Number']; ?> </td>
 					<td style="width:210px;"> <?php echo $row['Name']; ?> </td>
 					<td style="width:65px;"> <?php echo $row['Origin']; ?> </td>
-					<td style="width:55px;"> <?php echo $row['Destination']; ?> </td>
-					<td style="width:60px;"> <?php echo $row['Arrival']; ?> </td>
-					<td style="width:65px;"> <?php echo $row['Departure']; ?> </td>
+					<td style="width:60px;"> <?php echo $row['Destination']; ?> </td>
+					<td style="width:70px;"> <?php echo $row['Arrival']; ?> </td>
+					<td style="width:55px;"> <?php echo $row['Departure']; ?> </td>
 					<td style="width:20p;"> <?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
 					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>

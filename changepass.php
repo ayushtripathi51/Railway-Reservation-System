@@ -14,7 +14,7 @@ mysqli_select_db($conn,	"$db_name")or die("cannot select DB");
 $sql="UPDATE users SET password=$pass WHERE f_name='$name'"; 
 
 
-$result=mysql_query($sql);
+$result=mysqli_query($conn,$sql);
 
 $_SESSION['error']=6;
 

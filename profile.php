@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['name'])){}
+	else{
+		header("location:login1.php");
+		
+	}
 $tbl_name="users"; // Table name
 $name=$_SESSION['name'];
 

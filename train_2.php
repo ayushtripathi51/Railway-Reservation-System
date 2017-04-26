@@ -10,7 +10,11 @@ $tbl_name="interlist";
 mysql_connect("$host","$username","$password")or die("cannot connect");
 mysql_select_db("$db_name") or die("cannot select db");
 $k=0;
-
+if(isset($_SESSION['name'])){}
+	else{
+		header("location:login1.php");
+		
+	}
 if(isset($_POST['byname']) && ($_POST['bynum']==""))
 {
 	$name1=$_POST['byname'];

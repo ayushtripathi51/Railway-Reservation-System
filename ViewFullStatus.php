@@ -2,6 +2,11 @@
 session_start();
 	
 require('firstimport.php');
+if(isset($_SESSION['name'])){}
+	else{
+		header("location:login1.php");
+		
+	}
 $tbl_name="booking";
 
 mysqli_select_db($conn,"$db_name") or die("cannot select db");
@@ -145,6 +150,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 				
 				
 				</table>
+								<button onClick="window.print()">Print </button>
 		<!-- Copyright -->
 		<footer >
 		<div style="width:100%;">
