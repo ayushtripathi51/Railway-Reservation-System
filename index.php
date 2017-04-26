@@ -48,7 +48,7 @@ session_start();
 			 {
 			 ?>
 				<a href="login1.php" class="btn btn-info">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="signup.php" class="btn btn-info">Signup</a>
+				<a href="signup.php?value=0" class="btn btn-info">Signup</a>
 			<?php } ?>
 			
 			

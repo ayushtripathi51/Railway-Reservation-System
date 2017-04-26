@@ -1,3 +1,13 @@
+<?php
+	$val=$_GET['value'];
+	if($val==1){
+	?>
+	<h3>USer already exists</h3
+	<?php
+	}
+	
+
+?>
 <!DOCTYPE html>
 <html>
 <head>

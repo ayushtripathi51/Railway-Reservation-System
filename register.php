@@ -17,12 +17,31 @@ $mobile=$_POST['mobile'];
 $ques=$_POST['ques'];
 $ans=$_POST['ans'];
 
+$sql2="select * from $tbl_name";
+$result2=mysqli_query($conn,$sql2);
+$flag=0;
+while($row=mysqli_fetch_array($result2)){
+	if($row['f_name']==$fname and $row['l_name']==$lname and $row['email']==$mail and $row['dob']==$dob ){
+		echo ""."matched";
+		$flag=1;
+		break;
+	}
+}
+if($flag==1){
+	echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.location.href='signup.php?value=1';
+    </SCRIPT>");
+	die("");
+	//echo "oh yes";
+	}
+else{
+	$sql="INSERT INTO $tbl_name(f_name,l_name,password,email,gender,marital,dob,mobile,ques,ans)
+	VALUES ('$fname','$lname','$pass','$mail','$gender','$marital','$dob','$mobile','$ques','$ans')";
+	$result=mysqli_query($conn,$sql);
 
-$sql="INSERT INTO $tbl_name(f_name,l_name,password,email,gender,marital,dob,mobile,ques,ans)
-VALUES ('$fname','$lname','$pass','$mail','$gender','$marital','$dob','$mobile','$ques','$ans')";
-$result=mysql_query($sql);
-
-$_SESSION['name']=$fname;
-header("location:index.php");
+	$_SESSION['name']=$fname;
+	header("location:index.php");
+	
+}
 //echo "f_name ".$f_name."... ".$l_name."... ".$email.".... ".$password.",,, ".$gender.",,,,".$marital."..... ".$dob.".... ".$mobile."....".$ques.",,,,".$ans;
 ?>

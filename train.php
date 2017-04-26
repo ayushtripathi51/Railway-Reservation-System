@@ -188,7 +188,7 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					<td style="width:65px;"> <?php echo $d; ?> </td>
 					<td style="width:20p;"><?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
-					<td style="width:29px;"> <?php echo $row['Wen']; ?> </td>
+					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Thu']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Fri']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Sat']; ?> </td>
@@ -208,7 +208,7 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					<td style="width:65px;"> <?php echo $d; ?> </td>
 					<td style="width:20p;"> <?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
-					<td style="width:29px;"> <?php echo $row['Wen']; ?> </td>
+					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Thu']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Fri']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Sat']; ?> </td>
@@ -233,7 +233,7 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					<td style="width:65px;"> <?php echo $row['Departure']; ?> </td>
 					<td style="width:20p;"> <?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
-					<td style="width:29px;"> <?php echo $row['Wen']; ?> </td>
+					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Thu']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Fri']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Sat']; ?> </td>
@@ -253,7 +253,7 @@ else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 					<td style="width:65px;"> <?php echo $row['Departure']; ?> </td>
 					<td style="width:20p;"> <?php echo $row['Mon']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Tue']; ?> </td>
-					<td style="width:29px;"> <?php echo $row['Wen']; ?> </td>
+					<td style="width:29px;"> <?php echo $row['Wed']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Thu']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Fri']; ?> </td>
 					<td style="width:25px;"> <?php echo $row['Sat']; ?> </td>

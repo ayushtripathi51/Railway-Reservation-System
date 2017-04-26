@@ -6,7 +6,7 @@ require('firstimport.php');
 
 $tbl_name="users"; // Table name
 
-mysql_select_db($conn,"$db_name")or die("cannot select DB");
+mysqli_select_db($conn,"$db_name")or die("cannot select DB");
 
 
 if(!isset($_SESSION["name"]))
@@ -25,7 +25,7 @@ $ans=$_POST['ans1'];
 
 
 $sql="UPDATE $tbl_name SET l_name='$lname',email='$mail',gender='$gender',marital='$marital',dob='$dob',mobile='$mobile',ques='$ques',ans='$ans' WHERE f_name='$name'";
-$result=mysql_query($sql);
+$result=mysqli_query($conn,$sql);
 
 
 $_SESSION['error']==4;

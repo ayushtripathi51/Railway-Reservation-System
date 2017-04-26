@@ -109,7 +109,7 @@ session_start();
 			</tr>
 			<tr>
 			<td style="border-top:0px;"></td>
-			<td style="border-top:0px;"> <a class="btn btn-info" href="signup.php">Signup</a></td>
+			<td style="border-top:0px;"> <a class="btn btn-info" href="signup.php?value=0">Signup</a></td>
 			</tr>
 			
 			</table>

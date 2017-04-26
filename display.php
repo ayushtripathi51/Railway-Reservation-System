@@ -6,7 +6,7 @@ $tbl_name="booking";
 
 mysqli_select_db($conn,"$db_name") or die("cannot select db");
 	$name1=$_SESSION['name'];
-	$sql="SELECT DISTINCT Tnumber,class,doj,DOB,fromstn,tostn FROM $tbl_name WHERE uname='$name1' ORDER BY doj ASC";
+	$sql="SELECT DISTINCT Tnumber,class,doj,DOB,fromstn,tostn,Status FROM $tbl_name WHERE uname='$name1' ORDER BY doj ASC";
 	$result=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_array($result);
 
@@ -135,7 +135,7 @@ $result=mysqli_query($conn,$sql);
 					<th style="width:100px;border-top:0px;">From</th>
 					<th style="width:100px;border-top:0px;">To</th>
 					<th style="width:100px;border-top:0px;">Date Of Booking</th>
-					
+					<th style="width:100px;border-top:0px;">Current Status</th>
 				</tr>	
 				<?php
 				
@@ -151,6 +151,8 @@ $result=mysqli_query($conn,$sql);
 					<th style="width:100px;"> <?php echo $row['fromstn']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['tostn']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['DOB']; ?> </th>
+					<th style="width:100px;"> <?php echo $row['Status']; ?> </th>
+					<th style="width:100px;"><a href="ViewFullStatus.php?Tnumber=<?php echo $row['Tnumber'];?>&doj=<?php echo $row['doj'];?>&fromstn=<?php echo $row['fromstn']; ?>&tostn=<?php echo $row['tostn']; ?>&DOB=<?php echo $row['DOB'];?>">View Full Status </a> </th>
 				</tr>
 				<?php 
 					}
@@ -164,8 +166,9 @@ $result=mysqli_query($conn,$sql);
 					<th style="width:100px;"> <?php echo $row['fromstn']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['tostn']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['DOB']; ?> </th>
+					<th style="width:100px;"> <?php echo $row['Status']; ?> </th>
+					<th style="width:100px;"><a href="ViewFullStatus.php?Tnumber=<?php echo $row['Tnumber'];?>&doj=<?php echo $row['doj'];?>&fromstn=<?php echo $row['fromstn']; ?>&tostn=<?php echo $row['tostn']; ?>&DOB=<?php echo $row['DOB'];?>">View Full Status </a> </th>
 					
-
 				</tr>
 				<?php
 					}
