@@ -1,10 +1,11 @@
 <?php
 session_start();
-
-$host="localhost";
-$username="root";
-$password="root";
-$db_name="train";
+if(isset($_SESSION['name'])){}
+	else{
+		header("location:login1.php");
+		
+	}
+require('firstimport.php');
 $tbl_name="interlist";
 
 mysql_connect("$host","$username","$password")or die("cannot connect");
@@ -20,7 +21,6 @@ if(isset($_POST['byname']) && ($_POST['bynum']==""))
 	$name1=$_POST['byname'];
 	$k=2;
 	$name1=strtoupper($name1);
-	//echo "hi nikul   ".$name1;
 	$tbl_name="train_list";
 	$sql="SELECT * FROM $tbl_name WHERE Number='$name1' or Name='$name1' ";
 	$result=mysql_query($sql);
@@ -32,15 +32,12 @@ else if(isset($_POST['byname']) && isset($_POST['bynum']))
 	$to=$_POST['bynum'];
 	$from=strtoupper($from);
 	$to=strtoupper($to);
-	//echo $from.$to;
-	//echo "hi beby";
 	$sql="SELECT * FROM $tbl_name WHERE (Ori='$from' or st1='$from' or st2='$from' or st3='$from' or st4='$from' or st5='$from') and (st1='$to' or st2='$to' or st3='$to' or st4='$to' or st5='$to' or Dest='$to')";
 	$result=mysql_query($sql);
 }
 else if((!isset($_POST['byname'])) && (!isset($_POST['bynum'])))
 {
 	$k=0;
-	//echo "hi sexy";
 	$from="";
 	$to="";
 }
