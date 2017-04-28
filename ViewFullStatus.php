@@ -16,7 +16,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 	$fromstn=$_GET['fromstn'];
 	$tostn=$_GET['tostn'];
 	$DOB=$_GET['DOB'];
-	$sql="SELECT Tnumber,doj,Name,Age,Sex,Status,DOB FROM $tbl_name WHERE (uname='$name1' and Tnumber='$tno' and doj='$doj' and DOB='$DOB' and fromstn='$fromstn' and tostn='$tostn')";
+	$sql="SELECT Tnumber,doj,Name,Age,Sex,Status,DOB,class FROM $tbl_name WHERE (uname='$name1' and Tnumber='$tno' and doj='$doj' and DOB='$DOB' and fromstn='$fromstn' and tostn='$tostn')";
 	$result=mysqli_query($conn,$sql);
 ?>
 	<!DOCTYPE html>
@@ -108,6 +108,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 					<th style="width:100px;border-top:0px;">Sex</th>
 					<th style="width:100px;border-top:0px;">Status</th>
 					<th style="width:100px;border-top:0px;">DOB</th>
+					<th style="width:100px;border-top:0px;">Class</th>
 				</tr>	
 				<?php
 				
@@ -115,6 +116,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 				while($row=mysqli_fetch_array($result)){
 					if($n%2!=0)
 					{
+						$GLOBALS['class']=$row['class'];
 						
 				?>
 				<tr class="text-error">
@@ -126,6 +128,7 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 					<th style="width:100px;"> <?php echo $row['Sex']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['Status']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['DOB']; ?> </th>
+					<th style="width:100px;"> <?php echo $class; ?> </th>
 				</tr>
 				<?php 
 					}
@@ -141,15 +144,28 @@ mysqli_select_db($conn,"$db_name") or die("cannot select db");
 					<th style="width:100px;"> <?php echo $row['Sex']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['Status']; ?> </th>
 					<th style="width:100px;"> <?php echo $row['DOB']; ?> </th>
+					<th style="width:100px;"> <?php echo $class; ?> </th>
 				</tr>
 				<?php
 					}
 					$n++;
 				}
 				?>
-				
-				
+				<?php 
+				$sql2="Select ".$class." from train_list WHERE Number=$tno";
+				//echo $sql2;
+				$result2=mysqli_query($conn,$sql2);
+				while($row=mysqli_fetch_array($result2)){
+					$GLOBALS['amt']=$row[$class];
+				}
+				?>
 				</table>
+				<table class="table">
+				<tr class="text-info">
+					<td>Amount Paid :<?php $tot=($n-1)*$amt;echo $tot;?></td>
+				</tr>
+				</table>
+				
 								<button onClick="window.print()">Print </button>
 		<!-- Copyright -->
 		<footer >
