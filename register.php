@@ -25,7 +25,7 @@ $sql2="select * from $tbl_name";
 $result2=mysqli_query($conn,$sql2);
 $flag=0;
 while($row=mysqli_fetch_array($result2)){
-	if($row['f_name']==$fname and $row['l_name']==$lname and $row['email']==$mail and $row['dob']==$dob ){
+	if($row['email']==$mail){
 		echo ""."matched";
 		$flag=1;
 		break;

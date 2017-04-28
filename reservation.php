@@ -5,6 +5,7 @@ if(isset($_SESSION['name'])){}
 		header("location:login1.php");
 		
 	}
+	
 require('firstimport.php');
 $tbl_name="interlist";
 mysqli_select_db($conn,"$db_name") or die("cannot select db");
