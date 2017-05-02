@@ -34,7 +34,7 @@ while($row1=mysqli_fetch_array($result1)){
 }
 
 
-echo "</br>".$value."</br>".$seat."</br>";
+//echo "</br>".$value."</br>".$seat."</br>";
 
 if($value>0){
 	$status="Confirmed";
